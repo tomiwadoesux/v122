@@ -2,13 +2,13 @@
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import TextBlock from "../components/TextBlock";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Section1() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
-  const [hover, setHover] = useState(false);
+
   const [formattedDate, setFormattedDate] = useState("");
   const letters = [
     { char: "A", img: "/images/frog.jpg" },

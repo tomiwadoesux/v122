@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import TextBlock from "./TextBlock";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,7 @@ function Section2() {
 
   useEffect(() => {
     const topText = topTextRef.current;
-    const section = sectionRef.current;
+``
     const marquee = marqueeTextRef.current;
 
     // Duplicate content for seamless looping

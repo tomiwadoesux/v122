@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Footer() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
-  const [hover, setHover] = useState(false);
-  const [formattedDate, setFormattedDate] = useState("");
+
+
   const letters = [
     { char: "A", img: "/images/frog.jpg" },
     { char: "Y", img: "/images/corgi.jpg" },
