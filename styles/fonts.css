@@ -1,0 +1,21 @@
+/* ✅ Load Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+
+/* ✅ Load Tusker Grotesk (Self-Hosted) */
+@font-face {
+  font-family: "Tusker Grotesk";
+  src: url("/fonts/TuskerGrotesk-Regular.woff2") format("woff2"),
+       url("/fonts/TuskerGrotesk-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ✅ Global Font Styles */
+body {
+  font-family: "Coda", sans-serif;
+}
+
+/* ✅ Apply Tusker Grotesk to Headings */
+h1, h2, h3, h4, h5, h6, header {
+  font-family: "Tusker Grotesk", sans-serif;
+}

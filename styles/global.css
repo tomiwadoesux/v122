@@ -1,0 +1,51 @@
+/* ✅ Place @import FIRST! */
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+
+
+/* ✅ Now load self-hosted font */
+@font-face {
+  font-family: "Tusker Grotesk";
+  src: url("/fonts/TuskerGrotesk-Regular.woff2") format("woff2"),
+       url("/fonts/TuskerGrotesk-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ✅ Now Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Global Font Styles */
+body, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3,  header {
+  font-family: "Tusker Grotesk", sans-serif;
+}
+body {
+  background-color: #10161F; /* Change this to any color */
+  background-image: url("/images/pngegg.png") ; /* Add background image */
+  background-size: cover;
+  background-position: center;
+  background-size: 15%; /* Smaller size = More tiles */
+
+  background-repeat: repeat;
+}
+.outlined-text {
+  -webkit-text-stroke: 1px #EAFFFF; /* Creates outline */
+  color: transparent; /* Makes text transparent */
+}
+
+/* <div className="top-28 -left-5 relative max-w-7xl mx-auto px-5">
+<div className="flex flex-row gap-6">
+  <h3 className="pl-4 text-7xl md:text-7xl lg:text-7xl sm:6xl max-w-7xl">
+    VIDEOS BY SORA
+  </h3>
+</div>
+
+<div>
+  <TextBlock content="The generated images and videos are based on random prompts I came up with. I gave her clear instructions to capture the vibe I had in mind." />
+</div>
+</div> */
