@@ -89,8 +89,8 @@ function Section2() {
         <Image
           className="rounded w-[90%] sm:w-screen md:w-[50%] lg:w-[45%] h-auto md:mx-9 block mx-auto sm:mx-0"
           src="/images/runway.jpg"
-          width={600}
-          height={600}
+          width={500}
+          height={500}
           alt="Old people as runway models"
         />
 
@@ -99,8 +99,8 @@ function Section2() {
           <Image
             className="hidden sm:block rounded self-start w-[60%] sm:w-[40%] md:w-[60%] lg:w-[55%] h-auto md:mx-9"
             src="/images/frog.jpg"
-            width={600}
-            height={600}
+            width={500}
+            height={500}
             alt="Egyptian Art style Frog"
           />
           <Image
