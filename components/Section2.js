@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,7 @@ function Section2() {
 
   useEffect(() => {
     const topText = topTextRef.current;
-``
+
     const marquee = marqueeTextRef.current;
 
     // Duplicate content for seamless looping
@@ -73,10 +73,12 @@ function Section2() {
             .map((_, index) => (
               <div key={index} className="inline-flex items-center gap-8">
                 <h1 className="text-3xl font-bold">EXCEPT THIS</h1>
-                <img
-                  src="/images/black.jpg" // Replace with actual image path
-                  alt="black"
+                <Image
+                  src="/images/bg.jpg" // Replace with actual image path
+                  alt=""
                   className="h-8 w-auto object-contain"
+                  width={500}
+                  height={500}
                 />
               </div>
             ))}
@@ -84,20 +86,29 @@ function Section2() {
       </div>
       <div className="relative sm:left-8 flex flex-col sm:flex-row gap-16 max-w-7xl mx-auto px-3 justify-center items-center">
         {/* Left Side - Large Image */}
-        <img
+        <Image
           className="rounded w-[90%] sm:w-screen md:w-[50%] lg:w-[45%] h-auto md:mx-9 block mx-auto sm:mx-0"
           src="/images/runway.jpg"
+          width={500}
+          height={500}
+          alt="Old people as runway models"
         />
 
         {/* Right Side - Two Bigger Stacked Images */}
         <div className="flex gap-16 flex-col">
-          <img
+          <Image
             className="hidden sm:block rounded self-start w-[60%] sm:w-[40%] md:w-[60%] lg:w-[55%] h-auto md:mx-9"
             src="/images/frog.jpg"
+            width={500}
+            height={500}
+            alt="Egyptian Art style Frog"
           />
-          <img
+          <Image
             className="hidden sm:block rounded self-end w-[60%] sm:w-[40%] md:w-[60%] lg:w-[55%] h-auto md:mx-9"
             src="/images/corgi.jpg"
+            width={500}
+            height={500}
+            alt="Road outer space"
           />
         </div>
       </div>
@@ -131,9 +142,11 @@ function Section2() {
             {Array(10)
               .fill(0)
               .map((_, index) => (
-                <img
+                <Image
                   key={index}
                   src="/images/nextjs.png"
+                  width={500}
+                  height={500}
                   alt="Next.js Logo"
                   className="h-4 sm:h-4 md:h-4 lg:h-4 object-contain"
                 />

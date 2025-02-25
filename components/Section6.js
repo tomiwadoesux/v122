@@ -1,6 +1,8 @@
 "use client"; // Required for GSAP in Next.js
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Image from "next/image";
+
 
 function Section6() {
   const [hoveredText, setHoveredText] = useState(null);
@@ -23,10 +25,10 @@ function Section6() {
   }, [hoveredText]);
 
   const textItems = [
-    { id: 1, text: "OCTOPUS IN SPACE", image: "/images/frog.jpg" },
-    { id: 2, text: "RICH CAT", image: "/images/frog.jpg" },
-    { id: 3, text: "GOLD LEAF ON LIPS", image: "/images/frog.jpg" },
-    { id: 4, text: "BLACK MONALISA", image: "/images/frog.jpg" },
+    { id: 1, text: "OCTOPUS IN SPACE", image: "/images/octopus.png" },
+    { id: 2, text: "HIJAB ROBOT", image: "/images/robot.png" },
+    { id: 3, text: "OCEAN EYES", image: "/images/oceaneyes.png" },
+    { id: 4, text: "BLACK QUEEN", image: "/images/blackmonalisa.png" },
   ];
 
   return (
@@ -48,10 +50,12 @@ function Section6() {
 
       {/* Cursor-following Image */}
       {hoveredText && (
-        <img
+        <Image
           ref={imageRef}
           src={hoveredText.image}
-          alt="Hover Image"
+          alt=""
+          width={500}
+          height={500}
           className="absolute w-60 h-60 object-cover opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{ transform: "translate(-50%, -50%)" }}
         />

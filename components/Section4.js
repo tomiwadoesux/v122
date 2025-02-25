@@ -1,13 +1,11 @@
 "use client"; // Required for GSAP in Next.js
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Section4() {
-  const [hoveredText, setHoveredText] = useState(null);
-  const textRefs = useRef([]);
   const containerRef = useRef(null);
 
   useEffect(() => {

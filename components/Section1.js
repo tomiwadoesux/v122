@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,14 +12,14 @@ function Section1() {
 
   const [formattedDate, setFormattedDate] = useState("");
   const letters = [
-    { char: "A", img: "/images/frog.jpg" },
-    { char: "Y", img: "/images/corgi.jpg" },
-    { char: "O", img: "/images/runway.jpg" },
-    { char: "T", img: "/images/mountain.jpg" },
-    { char: "O", img: "/images/city.jpg" },
-    { char: "M", img: "/images/forest.jpg" },
-    { char: "C", img: "/images/beach.jpg" },
-    { char: "S", img: "/images/sky.jpg" },
+    { char: "A", img: "/images/swimming.png" },
+    { char: "Y", img: "/images/citylights.png" },
+    { char: "O", img: "/images/yellowhoodie.png" },
+    { char: "T", img: "/images/mirror.png" },
+    { char: "O", img: "/images/shadow.png" },
+    { char: "M", img: "/images/night.png" },
+    { char: "C", img: "/images/motel.png" },
+    { char: "S", img: "/images/dog.png" },
   ];
 
   useEffect(() => {
@@ -119,7 +120,7 @@ function Section1() {
           will comeChoose to stay in the VOID then LIGHT will come
         </h4>
         <div className=" self-start  -top-4 w-3/6 relative flex ">
-          <img src="/images/qr.png"></img>
+          <Image src="/images/qr.png" width={500} height={300} alt=""  className="w-full h-auto"></Image>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client"; // Required for GSAP in Next.js
-import { useEffect, useRef,  } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
@@ -9,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 export default function Section3() {
   const containerRef = useRef(null);
   const textRef = useRef(null);
-  
 
   useEffect(() => {
     gsap.to(textRef.current, {
@@ -28,60 +28,59 @@ export default function Section3() {
     const moveImages = (e) => {
       const { clientX, clientY } = e;
 
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img",  ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img"), {
         x: (clientX - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientY - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
 
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img2" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img2"), {
         x: (clientY - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientX - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
 
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img3" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img3"), {
         x: (clientX - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientY - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
 
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img4" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img4"), {
         x: (clientY - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientX - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
 
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img5" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img5"), {
         x: (clientX - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientY - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
 
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img6" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img6"), {
         x: (clientY - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientX - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img7" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img7"), {
         x: (clientX - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientY - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
-      gsap.to(containerRef.current.querySelectorAll(".parallax-img8" ), {
+      gsap.to(containerRef.current.querySelectorAll(".parallax-img8"), {
         x: (clientY - window.innerWidth / 2) * 0.06, // Moves slightly left/right
         y: (clientX - window.innerHeight / 2) * 0.03, // Moves slightly up/down
         ease: "power2.out",
         duration: 0.3,
       });
-     
     };
 
     window.addEventListener("mousemove", moveImages);
@@ -96,24 +95,36 @@ export default function Section3() {
       >
         {/* Right Side - Two Bigger Stacked Images */}
         <div className="flex gap-9 md:gap-16 mx-9 flex-row md:flex-col">
-          <img
+          <Image
             className="parallax-img rounded md:self-end w-[50%]  md:w-[75%] lg:w-[60%] h-auto md:mx-9"
-            src="/images/frog.jpg"
+            src="/images/goldlips.png"
+            width={500}
+            height={500}
+            alt="Gold leaf on lips"
           />
-          <img
+          <Image
             className="parallax-img2 rounded self-start w-[50%]  md:w-[75%] lg:w-[60%] h-auto md:mx-9"
-            src="/images/corgi.jpg"
+            src="/images/2way.png"
+            width={500}
+            height={500}
+            alt="Success and Struggle"
           />
-          <img
+          <Image
             className=" hidden sm:block parallax-img3 rounded self-end w-[40%] md:w-[75%] lg:w-[60%] h-auto md:mx-9"
-            src="/images/corgi.jpg"
+            src="/images/2planets.png"
+            width={500}
+            height={500}
+            alt=""
           />
         </div>
 
         <div className="  flex gap-32 flex-col">
-          <img
+          <Image
             className="parallax-img4 hidden sm:block rounded w-[90%] self-center sm:w-screen md:w-[85%] lg:w-[60%] h-auto md:mx-9 block mx-auto sm:mx-0"
-            src="/images/runway.jpg"
+            src="/images/fight.png"
+            width={500}
+            height={500}
+            alt="Black and White Boxer"
           />
 
           <div className="flex flex-row self-center gap-6">
@@ -125,24 +136,35 @@ export default function Section3() {
             </h3>
           </div>
 
-          <img
-            className="parallax-img5 self-center rounded w-[90%] self-center sm:w-screen md:w-[85%] lg:w-[60%] h-auto md:mx-9 block mx-auto sm:mx-0"
-            src="/images/runway.jpg"
+          <Image
+            className="parallax-img5  rounded w-[90%] self-center sm:w-screen md:w-[85%] lg:w-[60%] h-auto md:mx-9 block mx-auto sm:mx-0"
+            src="/images/acid.png"
+            width={500}
+            height={500}
+            alt=""
           />
         </div>
 
         <div className="flex gap-16 flex-row md:flex-col">
-          <img
+          <Image
             className="parallax-img6 sel  rounded w-[40%] self-start sm:w-screen md:w-[75%] lg:w-[60%] h-auto md:mx-9 block mx-auto sm:mx-0"
-            src="/images/runway.jpg"
+            src="/images/cloudflying.png"  width={500}
+            height={500}
+            alt=""
           />
-          <img
+          <Image
             className="parallax-img7  rounded w-[40%] sm:w-screen self-end md:w-[75%] lg:w-[60%] h-auto md:mx-9 block mx-auto sm:mx-0"
-            src="/images/runway.jpg"
+            src="/images/berry.png"
+            width={500}
+            height={500}
+            alt="The older the berry the swetter the juice"
           />
-          <img
+          <Image
             className="parallax-img8 hidden sm:block rounded w-[40%] sm:w-screen self-start md:w-[75%] lg:w-[60%] h-auto md:mx-9 block mx-auto sm:mx-0"
-            src="/images/runway.jpg"
+            src="/images/sleep.png"
+            width={500}
+            height={500}
+            alt="The older the berry the swetter the juice"
           />
         </div>
       </div>
@@ -174,7 +196,7 @@ export default function Section3() {
       </div> */}
 
       {/* Hoverable Outlined Text */}
-     
+
       {/* <div className="flex flex-col relative top-52 mx-12 max-w-7xl">
         <h3 className="pl-4 text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold whitespace-nowrap">
           VIDEOS BY SORA

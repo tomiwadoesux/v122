@@ -11,14 +11,14 @@ function Footer() {
 
 
   const letters = [
-    { char: "A", img: "/images/frog.jpg" },
-    { char: "Y", img: "/images/corgi.jpg" },
-    { char: "O", img: "/images/runway.jpg" },
-    { char: "T", img: "/images/mountain.jpg" },
-    { char: "O", img: "/images/city.jpg" },
-    { char: "M", img: "/images/forest.jpg" },
-    { char: "C", img: "/images/beach.jpg" },
-    { char: "S", img: "/images/sky.jpg" },
+    { char: "A", img: "/images/swimming.png" },
+    { char: "Y", img: "/images/citylights.png" },
+    { char: "O", img: "/images/yellowhoodie.png" },
+    { char: "T", img: "/images/mirror.png" },
+    { char: "O", img: "/images/shadow.png" },
+    { char: "M", img: "/images/night.png" },
+    { char: "C", img: "/images/motel.png" },
+    { char: "S", img: "/images/dog.png" },
   ];
   useEffect(() => {
     // Text Animation

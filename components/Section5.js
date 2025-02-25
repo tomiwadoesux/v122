@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Section5() {
@@ -35,14 +37,24 @@ export default function Section5() {
       >
         {/* Left Side - Images */}
         <div className="flex gap-32 mx-9 flex-row md:flex-col">
-          <img
-            className="parallax-img hidden sm:block rounded self-end w-[40%] md:w-[60%] lg:w-[90%] h-auto"
-            src="/images/frog.jpg"
-          />
-          <img
-            className="parallax-img hidden sm:block self-end rounded w-[40%] md:w-[80%] lg:w-[60%] h-auto"
-            src="/images/corgi.jpg"
-          />
+        <video
+              className="parallax-img hidden sm:block rounded self-end w-[40%] md:w-[60%] lg:w-[90%] h-auto"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/videos/dessert.mp4" type="video/mp4" />
+            </video>
+              <video
+              className="parallax-img hidden sm:block rounded self-end w-[40%] md:w-[60%] lg:w-[90%] h-auto"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/videos/samurai.mp4" type="video/mp4" />
+            </video>
         </div>
 
         {/* Center - Text and Images */}
@@ -58,7 +70,7 @@ export default function Section5() {
               muted
               playsInline
             >
-              <source src="/videos/room.mp4" type="video/mp4" />
+              <source src="/videos/ballroom.mp4" type="video/mp4" />
             </video>
             <video
               className="parallax-img rounded w-[90%] self-center lg:hidden sm:w-screen lg:w-[60%] h-auto"
@@ -67,21 +79,31 @@ export default function Section5() {
               muted
               playsInline
             >
-              <source src="/videos/room.mp4" type="video/mp4" />
+              <source src="/videos/underwater.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
 
         {/* Right Side - More Images */}
         <div className="flex gap-32 mx-9 flex-row md:flex-col">
-          <img
-            className="parallax-img hidden sm:block self-start rounded w-[40%] md:w-[50%] lg:w-[60%] h-auto"
-            src="/images/runway.jpg"
-          />
-          <img
-            className="parallax-img hidden sm:block rounded w-[40%] md:w-[50%] lg:w-[90%] h-auto"
-            src="/images/runway.jpg"
-          />
+        <video
+              className="parallax-img hidden sm:block rounded self-end w-[40%] md:w-[60%] lg:w-[90%] h-auto"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/videos/cityscape.mp4" type="video/mp4" />
+            </video>
+            <video
+              className="parallax-img hidden sm:block rounded self-end w-[40%] md:w-[60%] lg:w-[90%] h-auto"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/videos/firedance.mp4" type="video/mp4" />
+            </video>
         </div> 
       </div>
     </section>
