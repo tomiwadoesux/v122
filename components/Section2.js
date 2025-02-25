@@ -176,7 +176,7 @@ function Section2() {
           </h4>
         </div>
       </div> */}
-      ``
+      
     </section>
   );
 }
